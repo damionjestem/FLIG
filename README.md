@@ -1,10 +1,13 @@
 # FLIG
 
+This is a tool to move images from flickr to instagram.
+I'm going to use angular for front, didn't thought about backend. Probably will figure out when I'll check flikr API.
+
+Used Figma for little help with design.
+
+It ain't much but it's honest work 👨‍🌾🚜
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
