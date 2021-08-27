@@ -1,0 +1,11 @@
+<div class="form col">
+  <div>
+    <label for="nick">Nick: </label>
+    <input id="nick" [(ngModel)]="pic.username" placeholder="name" />
+  </div>
+  <div>
+    <label for="pic-url">Picture URL: </label>
+    <input id="pic-url" [(ngModel)]="pic.picUrl" placeholder="URL" />
+  </div>
+  <p>{{ pic.username }}</p>
+</div>

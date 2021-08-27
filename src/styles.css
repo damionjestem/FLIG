@@ -8,36 +8,3 @@ body {
   width: auto;
   border-radius: 50px;
 }
-
-/***HEADER***/
-
-.flig-head {
-  font-family: Montserrat;
-  /* identical to box height */
-  align-items: center;
-  letter-spacing: -0.055em;
-}
-.flig-head > * {
-  margin: 2.5% 2.5% 0px 2.5%;
-}
-
-.logo {
-  align-items: center;
-}
-
-.menu {
-  background: #ffffff;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 16pt;
-}
-
-/***HEADER END**/
-/****CONTENT****/
-
-.form {
-  background: #ffffff;
-  min-height: 50px;
-  width: 95%;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0px 0px 20px 20px;
-}

@@ -1,0 +1,19 @@
+.flig-head {
+  font-family: Montserrat;
+  /* identical to box height */
+  align-items: center;
+  letter-spacing: -0.055em;
+}
+.flig-head > * {
+  margin: 2.5% 2.5% 0px 2.5%;
+}
+
+.logo {
+  align-items: center;
+}
+
+.menu {
+  background: #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 16pt;
+}
