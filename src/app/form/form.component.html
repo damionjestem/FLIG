@@ -1,11 +1,22 @@
-<div class="form col">
+<form class="form col">
   <div>
     <label for="nick">Nick: </label>
-    <input id="nick" [(ngModel)]="pic.username" placeholder="name" />
+    <input
+      id="nick"
+      [(ngModel)]="pic.username"
+      placeholder="name"
+      name="nick"
+    />
   </div>
   <div>
     <label for="pic-url">Picture URL: </label>
-    <input id="pic-url" [(ngModel)]="pic.picUrl" placeholder="URL" />
+    <input
+      id="pic-url"
+      [(ngModel)]="pic.picUrl"
+      placeholder="URL"
+      name="pic-url"
+    />
   </div>
+  <input type="submit" value="dupa" />
   <p>{{ pic.username }}</p>
-</div>
+</form>
