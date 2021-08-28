@@ -8,13 +8,15 @@ import { MaincontainerComponent } from './maincontainer/maincontainer.component'
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PreviewComponent } from './preview/preview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenubarComponent,
     MaincontainerComponent,
-    FormComponent
+    FormComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
