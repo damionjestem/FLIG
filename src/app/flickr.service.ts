@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -17,7 +18,9 @@ export class FlickrService {
   method: string = "flickr.people.getPublicPhotos";
   endpoint: string = "https://www.flickr.com/services/rest/";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this
+   }
   /**
    * Uses Flickr's API function flickr.people.findByUsername to get ID of user
    * @param username - username on Flickr

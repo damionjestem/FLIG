@@ -1,12 +1,12 @@
-<ng-form class="form col">
-  <div>
-    <label for="nick">Nick: </label>
-    <input [(ngModel)]="pic.username" placeholder="name" name="nick" />
+<form formGroupName="flickrForm" (ngSubmit)="onSubmit()" class="form col">
+  <div class="form-group">
+    <label for="username">Nick: </label>
+    <input class="form-control" name="username" formControlName="username" />
   </div>
-  <div>
+  <div class="form-group">
     <label for="pic-url">Picture URL: </label>
-    <input [(ngModel)]="pic.picUrl" placeholder="URL" name="pic-url" />
+    <input class="form-control" name="pic-url" formControlName="picUrl" />
   </div>
   <input type="button" ng-click="clickHandle( pic.username )" value="Submit" />
   <p></p>
-</ng-form>
+</form>
