@@ -15,7 +15,7 @@ export class PreviewComponent implements OnInit {
   }
 
   showResults() {
-    this.flickrService.getResponse().subscribe(
+    this.flickrService.getResponse("USERNAME").subscribe(
       x => this.resultText = x.toString(),
       err => console.log("something is not yes: " + err),
       () => console.log("wykonało się"));

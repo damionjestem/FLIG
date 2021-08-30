@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ItemToUpload } from '../itemtoupload';
+import { FormBuilder } from '@angular/forms';
+import { DataProvided } from '../dataprovided';
+import { FlickrService } from '../flickr.service';
 
 @Component({
   selector: 'app-form',
@@ -8,12 +10,21 @@ import { ItemToUpload } from '../itemtoupload';
 })
   
 export class FormComponent implements OnInit {
-  pic: ItemToUpload = {
+  constructor(
+    private formBuilder: FormBuilder,
+    private flickrService: FlickrService,
+  ) { }
+
+  uploadDetails = this.flickrService;
+  pic: DataProvided = {
     username: "",
     picUrl: "",
   };
 
-  constructor() { }
+  submitRequest(details: DataProvided) {
+    this.flickrService.setUploadDetails(details.username, details.picUrl);
+    console.log("request details has been set");
+  }
 
   ngOnInit(): void {
   }

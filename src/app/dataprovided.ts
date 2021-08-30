@@ -1,4 +1,4 @@
-export interface ItemToUpload{
+export interface DataProvided{
     username: string;
     picUrl: string;
 }
