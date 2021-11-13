@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm } from '@angular/forms';
 import { DataProvided } from '../dataprovided';
 import { FlickrService } from '../flickr.service';
 
@@ -11,31 +11,38 @@ import { FlickrService } from '../flickr.service';
   
 export class FormComponent implements OnInit {
   flickrForm: FormGroup;
-  constructor(
-    private formBuilder: FormBuilder,
-    private flickrService: FlickrService,
-  ) {
-    this.flickrForm = this.formBuilder.group({
-      username: [''],
-      picUrl: [''],
+  uploadDetails = this.flickrService;
+  pic: DataProvided = {
+    username: "",
+    picUrl: "",
+  };
+
+  constructor(private flickrService: FlickrService) {
+    this.flickrForm = new FormGroup({
+      username: new FormControl(),
+      picUrl: new FormControl(),
     })
   }
   
-  get userName() {
+  getUserName() {
     return this.flickrForm.get('username');
   }
 
-  get pictureUrl() {
+  getPictureUrl() {
     return this.flickrForm.get('picUrl');
   }
 
-  uploadDetails = this.flickrService;
-  pic: DataProvided = {
-    username: this.userName?.value,
-    picUrl: this.pictureUrl?.value,
-  };
+  setUserName(username: any) {
+    this.pic["username"] = username;
+  }
 
-  onSubmit() {
+  setPictureUrl(url: any) {
+    this.pic["picUrl"] = url;
+  }
+
+  onSubmit(form: FormGroup) {
+    this.setUserName(form.get('username'));
+    this.setPictureUrl(form.get('picUrl'));
     this.submitRequest(this.pic);
   }
 
@@ -45,10 +52,6 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.flickrForm = new FormGroup({
-    uName: new FormControl(),
-    pUrl: new FormControl(),
-  });
+    
   }
-
 }
