@@ -10,19 +10,19 @@ import { FlickrService } from '../flickr.service';
 })
   
 export class FormComponent implements OnInit {
+  constructor(private flickrService: FlickrService) {
+    this.flickrForm = new FormGroup({
+      username: new FormControl(),
+      pictureUrl: new FormControl(),
+    })
+  }
+  
   flickrForm: FormGroup;
   uploadDetails = this.flickrService;
   pic: DataProvided = {
     username: "",
     picUrl: "",
   };
-
-  constructor(private flickrService: FlickrService) {
-    this.flickrForm = new FormGroup({
-      username: new FormControl(),
-      picUrl: new FormControl(),
-    })
-  }
   
   getUserName() {
     return this.flickrForm.get('username');

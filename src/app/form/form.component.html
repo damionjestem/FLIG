@@ -4,13 +4,23 @@
   (ngSubmit)="onSubmit(f.value)"
   class="form col"
 >
-  <div formControlName="username">
+  <div>
     <label for="username">Username: </label>
-    <input type="text" class="form-control" name="username" />
+    <input
+      type="text"
+      class="form-control"
+      name="username"
+      formControlName="username"
+    />
   </div>
-  <div formControlName="picurl">
+  <div>
     <label for="pic-url">Picture URL: </label>
-    <input type="url" class="form-control" name="pic-url" />
+    <input
+      type="url"
+      class="form-control"
+      name="pic-url"
+      formControlName="pictureUrl"
+    />
   </div>
   <input type="button" ng-click="clickHandle( pic.username )" value="Submit" />
   <p></p>
