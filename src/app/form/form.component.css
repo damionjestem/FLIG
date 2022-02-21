@@ -1,7 +1,3 @@
-.form {
-  margin: 1%;
-}
-
-.form > * {
-  margin: 5px;
+.head {
+  display: inline;
 }

@@ -1,17 +1,26 @@
 <div class="content pb-4 d-flex justify-content-evenly">
-  <div class="content-inside row">
-    <div class="col">
-      <h2>Flickr</h2>
-      <app-form id="flickr-form"></app-form>
+  <div class="content-inside">
+    <div class="row">
+      <div class="col">
+        <app-form [platform]="'Upload'"></app-form>
+      </div>
+      <div class="col">
+        <form>
+          <h2>choose platform</h2>
+          <div *ngFor="let platformName of platforms">
+            <label [for]="{platformName}"> {{ platformName }} </label>
+            <input type="checkbox" [name]="{platformName}" />
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="col">
-      <h2>Instagram</h2>
-      <app-form id="ig-form"></app-form>
+
+    <div class="row">
+      <app-preview>
+        <!--
+          Preview
+        -->
+      </app-preview>
     </div>
   </div>
-  <!--
-  <div class="row">
-    <app-preview></app-preview>
-  </div>
-  -->
 </div>

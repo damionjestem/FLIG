@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm } from '@angular/forms';
 import { DataProvided } from '../dataprovided';
 import { FlickrService } from '../flickr.service';
@@ -10,13 +10,16 @@ import { FlickrService } from '../flickr.service';
 })
   
 export class FormComponent implements OnInit {
+  
+  @Input() platform = "";
+  
   constructor(private flickrService: FlickrService) {
     this.flickrForm = new FormGroup({
       username: new FormControl(),
       pictureUrl: new FormControl(),
     })
   }
-  
+
   flickrForm: FormGroup;
   uploadDetails = this.flickrService;
   pic: DataProvided = {

@@ -1,1 +1,9 @@
-<p>{{ resultText }}</p>
+<div *ngIf="resultText; else elsePreview">
+  <p>{{ resultText }}</p>
+</div>
+
+<ng-template #elsePreview>
+  Hello in platform which allows to export your picture to both platforms.
+  <br />
+  Please fill in the fields above and press submit.
+</ng-template>
